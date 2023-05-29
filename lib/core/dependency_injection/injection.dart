@@ -8,4 +8,4 @@ final sl = GetIt.instance;
 @InjectableInit()
 
 /// this is the method to initialize the dependency injection tree.
-void configureDependencies() => sl.init();
+void configureDependencies() => $initGetIt(sl);
