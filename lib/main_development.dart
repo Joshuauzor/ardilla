@@ -1,10 +1,11 @@
+import 'package:ardilla/app/view/app.dart';
+import 'package:ardilla/bootstrap.dart';
+import 'package:ardilla/core/core.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:gox/app/app.dart';
-import 'package:gox/bootstrap.dart';
-import 'package:gox/injections.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +18,6 @@ Future<void> main() async {
   ]).then((_) async {
     await bootstrap(
       () => DevicePreview(
-        // ignore: avoid_redundant_argument_values
         enabled: !kReleaseMode,
         builder: (context) => const App(),
       ),

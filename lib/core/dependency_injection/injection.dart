@@ -1,3 +1,4 @@
+import 'package:ardilla/core/dependency_injection/injection.config.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
@@ -7,4 +8,4 @@ final sl = GetIt.instance;
 @InjectableInit()
 
 /// this is the method to initialize the dependency injection tree.
-void configureDependencies() => $initGetIt(sl);
+void configureDependencies() => sl.init();
