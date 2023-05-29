@@ -12,6 +12,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         viewToShow: const SplashView(),
       );
 
+    case RouteName.onboardingView:
+      return _getPageRoute(
+        routeName: settings.name!,
+        viewToShow: const OnboardingScreen(),
+      );
+
     // case RouteName.reportActivity:
     //   final args = settings.arguments as ReportActivityParams;
 

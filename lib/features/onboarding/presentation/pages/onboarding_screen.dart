@@ -1,3 +1,5 @@
+import 'package:ardilla/app/app.dart';
+import 'package:ardilla/core/core.dart';
 import 'package:ardilla/features/features.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -52,41 +54,47 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   children: [
                     PageItem(
                       currentIndex: currentIndex,
-                      illustration: AppAssets.oneMeansId,
-                      text: TextBold(
+                      illustration: AppAssets.top,
+                      text: HeaderText(
                         'Lorem Ipsum Kip Antares Lorem',
-                        color: AppColors.midnightBlue,
+                        color: AppColors.darkPurple,
                       ),
-                      description: TextBody(
-                        'Lorem ipsum dolor sit amet consectetur. Congue eget aliquet nullam velit volutpat in viverra. Amet integer urna ornare congue ultrices at.',
-                        color: AppColors.mainSub,
+                      description: TextRegular(
+                        'Lorem itodjo dolor sit amet jsjsj. Congue eget aliquet nullam velit volutpat in viverra. Amet integer urna ornare congue ultrices at.',
+                        color: AppColors.darkPurple,
                         maxLines: 4,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
                       ),
                     ),
                     PageItem(
                       currentIndex: currentIndex,
-                      illustration: AppAssets.oneMeansId,
-                      text: TextBold(
-                        'Lorem Ipsum Kip Antares Lorem',
-                        color: AppColors.midnightBlue,
+                      illustration: AppAssets.top,
+                      text: HeaderText(
+                        'Lorem Hello Lorem',
+                        color: AppColors.darkPurple,
                       ),
-                      description: TextBody(
-                        'Lorem ipsum dolor sit amet consectetur. Congue eget aliquet nullam velit volutpat in viverra. Amet integer urna ornare congue ultrices at.',
-                        color: AppColors.mainSub,
+                      description: TextRegular(
+                        'Lorem otpsbujfant consectetur. jdjud aliquet nullam velit volutpat in viverra. Amet integer urna ornare congue ultrices at.',
+                        color: AppColors.darkPurple,
                         maxLines: 4,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
                       ),
                     ),
                     PageItem(
                       currentIndex: currentIndex,
-                      illustration: AppAssets.oneMeansId,
-                      text: TextBold(
-                        'Lorem Ipsum Kip Antares Lorem',
-                        color: AppColors.midnightBlue,
+                      illustration: AppAssets.top,
+                      text: HeaderText(
+                        'Lorem Hey Antares Lorem',
+                        color: AppColors.darkPurple,
                       ),
-                      description: TextBody(
-                        'Lorem ipsum dolor sit amet consectetur. Congue eget aliquet nullam velit volutpat in viverra. Amet integer urna ornare congue ultrices at.',
-                        color: AppColors.mainSub,
+                      description: TextRegular(
+                        'Lorem hseeopd amet consectetur. Congue eget aliquet nullam velit volutpat in viverra. Amet integer urna ornare congue ultrices at.',
+                        color: AppColors.darkPurple,
                         maxLines: 4,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
                       ),
                     ),
                   ],
