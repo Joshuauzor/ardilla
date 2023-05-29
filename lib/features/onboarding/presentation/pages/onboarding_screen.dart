@@ -2,7 +2,6 @@ import 'package:ardilla/app/app.dart';
 import 'package:ardilla/core/core.dart';
 import 'package:ardilla/features/features.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -137,7 +136,7 @@ class PageItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            child: SvgPicture.asset(illustration),
+            child: Image.asset(illustration),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
