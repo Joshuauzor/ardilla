@@ -166,7 +166,7 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
                   return InputField(
                     prefix: Row(
                       children: [
-                        SvgPicture.asset(AppAssets.mail),
+                        SvgPicture.asset(AppAssets.biCode),
                         const Gap(10),
                       ],
                     ),
@@ -195,7 +195,7 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
                   return InputField(
                     prefix: Row(
                       children: [
-                        SvgPicture.asset(AppAssets.mail),
+                        SvgPicture.asset(AppAssets.user),
                         const Gap(10),
                       ],
                     ),
@@ -223,7 +223,7 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
                   return InputField(
                     prefix: Row(
                       children: [
-                        SvgPicture.asset(AppAssets.mail),
+                        SvgPicture.asset(AppAssets.user),
                         const Gap(10),
                       ],
                     ),
@@ -251,7 +251,7 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
                   return InputField(
                     prefix: Row(
                       children: [
-                        SvgPicture.asset(AppAssets.mail),
+                        SvgPicture.asset(AppAssets.phone),
                         const Gap(10),
                       ],
                     ),
@@ -279,7 +279,7 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
                   return InputField(
                     prefix: Row(
                       children: [
-                        SvgPicture.asset(AppAssets.mail),
+                        SvgPicture.asset(AppAssets.users),
                         const Gap(10),
                       ],
                     ),
@@ -307,7 +307,7 @@ class _CompleteProfileViewState extends State<CompleteProfileView> {
                   return InputField(
                     prefix: Row(
                       children: [
-                        SvgPicture.asset(AppAssets.mail),
+                        SvgPicture.asset(AppAssets.password),
                         const Gap(10),
                       ],
                     ),

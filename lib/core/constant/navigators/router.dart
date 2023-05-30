@@ -36,6 +36,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         viewToShow: const CompleteProfileView(),
       );
 
+    case RouteName.signInView:
+      return _getPageRoute(
+        routeName: settings.name!,
+        viewToShow: const SignInView(),
+      );
+
     // case RouteName.reportActivity:
     //   final args = settings.arguments as ReportActivityParams;
 

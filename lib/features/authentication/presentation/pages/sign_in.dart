@@ -6,29 +6,40 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
-class SignUpView extends StatefulWidget {
-  const SignUpView({super.key});
+class SignInView extends StatefulWidget {
+  const SignInView({super.key});
 
   @override
-  State<SignUpView> createState() => _SignUpViewState();
+  State<SignInView> createState() => _SignInViewState();
 }
 
-class _SignUpViewState extends State<SignUpView> {
+class _SignInViewState extends State<SignInView> {
   final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
 
   final _emailFocus = FocusNode();
+  final _passwordFocus = FocusNode();
 
   late StreamController<String> _emailStreamController;
+  late StreamController<String> _passwordStreamController;
 
   final ValueNotifier<bool> _canSubmit = ValueNotifier(false);
 
   @override
   void initState() {
     _emailStreamController = StreamController<String>.broadcast();
+    _passwordStreamController = StreamController<String>.broadcast();
 
     _emailController.addListener(() {
       _emailStreamController.sink.add(
         _emailController.text.trim(),
+      );
+      validateInputs();
+    });
+
+    _passwordController.addListener(() {
+      _passwordStreamController.sink.add(
+        _passwordController.text.trim(),
       );
       validateInputs();
     });
@@ -44,7 +55,12 @@ class _SignUpViewState extends State<SignUpView> {
       'Email Address is required',
     );
 
-    if (emailError != '') {
+    final passwordError = CustomFormValidation.errorMessagePassword(
+      _passwordController.text.trim(),
+      'Phone is required',
+    );
+
+    if (emailError != '' || passwordError != '') {
       canSumit = false;
     }
     _canSubmit.value = canSumit;
@@ -54,7 +70,6 @@ class _SignUpViewState extends State<SignUpView> {
   void dispose() {
     super.dispose();
     _emailStreamController.close();
-    _emailController.dispose();
   }
 
   @override
@@ -122,19 +137,19 @@ class _SignUpViewState extends State<SignUpView> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Gap(70),
+                    Gap(screenHeight(context) * 0.04),
                     HeaderText(
-                      'Get Started',
+                      'Welcome !',
                       color: AppColors.darkPurple,
                     ),
-                    const Gap(12),
+                    Gap(screenHeight(context) * 0.01),
                     TextRegular(
-                      'To Create an account enter a valid email address',
+                      'Here’s how to Log in to access your account',
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
                       color: AppColors.gray,
                     ),
-                    const Gap(35),
+                    Gap(screenHeight(context) * 0.03),
                     StreamBuilder<String>(
                       stream: _emailStreamController.stream,
                       builder: (context, snapshot) {
@@ -163,7 +178,45 @@ class _SignUpViewState extends State<SignUpView> {
                         );
                       },
                     ),
-                    Gap(screenHeight(context) * 0.22),
+                    Gap(screenHeight(context) * 0.01),
+                    StreamBuilder<String>(
+                      stream: _passwordStreamController.stream,
+                      builder: (context, snapshot) {
+                        return InputField(
+                          prefix: Row(
+                            children: [
+                              SvgPicture.asset(AppAssets.password),
+                              const Gap(10),
+                            ],
+                          ),
+                          controller: _passwordController,
+                          placeholder: 'Password',
+                          validationMessage:
+                              CustomFormValidation.errorMessagePassword(
+                            snapshot.data,
+                            'Password is required*',
+                          ),
+                          validationColor: CustomFormValidation.getColor(
+                            snapshot.data,
+                            _passwordFocus,
+                            CustomFormValidation.errorMessagePassword(
+                              snapshot.data,
+                              'Password is required*',
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    Gap(screenHeight(context) * 0.01),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: TextRegular(
+                        'Forgot Password?',
+                        fontSize: 12,
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
+                    Gap(screenHeight(context) * 0.03),
                     ValueListenableBuilder(
                       valueListenable: _canSubmit,
                       builder: (context, canSubmit, child) {
@@ -177,28 +230,47 @@ class _SignUpViewState extends State<SignUpView> {
                         );
                       },
                     ),
+                    Gap(screenHeight(context) * 0.02),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const SizedBox(
+                          width: 98,
+                          child: Divider(),
+                        ),
+                        TextRegular(
+                          ' Or ',
+                          fontSize: 12,
+                          color: AppColors.lightAsh,
+                        ),
+                        const SizedBox(
+                          width: 98,
+                          child: Divider(),
+                        ),
+                      ],
+                    ),
                     Gap(screenHeight(context) * 0.03),
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(
-                        context,
-                        RouteName.signInView,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextRegular(
-                            'Already have an account?',
-                            fontSize: 12,
-                            color: AppColors.gray,
-                          ),
-                          TextRegular(
-                            ' Sign in',
-                            fontSize: 12,
-                            color: AppColors.primaryColor,
-                          ),
-                        ],
-                      ),
-                    )
+                    SecondaryBusyButton(
+                      title: 'Sign in with SAN ID',
+                      onpress: () {},
+                    ),
+                    Gap(screenHeight(context) * 0.03),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextRegular(
+                          'New user? ',
+                          fontSize: 12,
+                          color: AppColors.gray,
+                        ),
+                        TextRegular(
+                          'Create Account',
+                          fontSize: 12,
+                          color: AppColors.gray,
+                        ),
+                      ],
+                    ),
+                    Gap(screenHeight(context) * 0.03),
                   ],
                 ),
               ),

@@ -10,4 +10,9 @@ class AppAssets {
   static const String showEye = 'assets/icons/show_eye.svg';
   static const String mail = 'assets/icons/mail.svg';
   static const String sendMail = 'assets/images/send_mail.png';
+  static const String biCode = 'assets/icons/bi_code.svg';
+  static const String user = 'assets/icons/user.svg';
+  static const String phone = 'assets/icons/smartphone.svg';
+  static const String users = 'assets/icons/users.svg';
+  static const String password = 'assets/icons/password.svg';
 }
