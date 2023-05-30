@@ -78,6 +78,33 @@ class _SignUpViewState extends State<SignUpView> {
             ),
           ),
           Positioned(
+            left: 17,
+            right: 18,
+            top: MediaQuery.of(context).size.height * 0.23,
+            child: Container(
+              decoration: const BoxDecoration(
+                color: Color(0x808807F7),
+
+                // color: AppColors.black,
+                boxShadow: [
+                  BoxShadow(
+                    color: Color(0XFFFFFFFF),
+                  ),
+                  BoxShadow(
+                    color: Color(0X00FFFFFF),
+                  )
+                ],
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                ),
+              ),
+              child: const SizedBox(
+                height: 40,
+              ),
+            ),
+          ),
+          Positioned(
             left: 0,
             right: 0,
             top: MediaQuery.of(context).size.height * 0.25,
