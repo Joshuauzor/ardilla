@@ -29,15 +29,11 @@ class _AppState extends State<App> {
             onGenerateRoute: generateRoute,
             theme: ThemeData(
               appBarTheme: const AppBarTheme(
-                color: Color(0xFF7DC245),
+                color: AppColors.white,
               ),
-              // primarySwatch: const MaterialColor(
-              //   0xff3A86FF,
-              //   AppColors.colorScratch,
-              // ),
-              primaryColor: const Color(0xFF7DC245),
+              primaryColor: AppColors.primaryColor,
               colorScheme: ColorScheme.fromSwatch(
-                accentColor: const Color(0xFF7DC245),
+                accentColor: AppColors.primaryColor,
               ),
             ),
             initialRoute: RouteName.splash,

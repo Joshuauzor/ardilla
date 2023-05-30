@@ -16,15 +16,19 @@ class _SignUpViewState extends State<SignUpView> {
       body: Column(
         children: [
           Container(
-            decoration: BoxDecoration(
+            height: 270,
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(AppAssets.signupBg),
                 fit: BoxFit.cover,
               ),
             ),
             child: Center(
-              child: SvgPicture.asset(AppAssets.logo),
+              child: SvgPicture.asset(AppAssets.logoName),
             ),
+          ),
+          Container(
+            decoration: BoxDecoration(),
           ),
         ],
       ),
