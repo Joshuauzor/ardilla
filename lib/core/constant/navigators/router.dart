@@ -30,6 +30,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         viewToShow: const VerifyEmail(),
       );
 
+    case RouteName.completeProfile:
+      return _getPageRoute(
+        routeName: settings.name!,
+        viewToShow: const CompleteProfileView(),
+      );
+
     // case RouteName.reportActivity:
     //   final args = settings.arguments as ReportActivityParams;
 

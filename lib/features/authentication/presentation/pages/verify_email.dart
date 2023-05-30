@@ -41,7 +41,10 @@ class _VerifyEmailState extends State<VerifyEmail> {
             const Gap(26),
             BusyButton(
               title: 'Continue',
-              onpress: () {},
+              onpress: () => Navigator.pushNamed(
+                context,
+                RouteName.completeProfile,
+              ),
             ),
           ],
         ),

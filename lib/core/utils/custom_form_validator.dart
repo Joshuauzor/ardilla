@@ -63,8 +63,6 @@ class CustomFormValidation {
   }
 
   static String errorMessage(String? text, String message, [String? type]) {
-    // var text = text ? '' : message;
-    // return text;
     if (text == null) {
       return '';
     } else if (text.isEmpty) {
@@ -75,9 +73,6 @@ class CustomFormValidation {
   }
 
   static String errorMessageUrl(String? text, String message, [String? type]) {
-    // var text = text ? '' : message;
-    // return text;
-
     if (text == null) {
       return '';
     } else if (text.isEmpty) {
@@ -97,29 +92,13 @@ class CustomFormValidation {
     String message, [
     String? type,
   ]) {
-    // var text = text ? '' : message;
-    // return text;
-    // final hasUpperCase = RegExp('(?:[A-Z])');
-    // final hasLowerCase = RegExp('(?:[a-z])');
-    // final hasSymbols = RegExp(r"[!@#$%^&*(),\|+=;.?':{}|<>]");
-    // final hasANumber = RegExp('(?=.*?[0-9])');
     if (text == null) {
       return '';
     } else if (text.isEmpty) {
       return message;
     } else if (text.length <= 5) {
       return 'Password must have 5 or more characters';
-    }
-    //  else if (!hasANumber.hasMatch(text)) {
-    //   return 'Password must have at least a number';
-    // } else if (!hasLowerCase.hasMatch(text)) {
-    //   return 'Password must have at a lower character';
-    // } else if (!hasSymbols.hasMatch(text)) {
-    //   return 'Password must have at a special character';
-    // } else if (!hasUpperCase.hasMatch(text)) {
-    //   return 'Password must have at a upper character';
-    // }
-    else {
+    } else {
       return '';
     }
   }
@@ -130,12 +109,6 @@ class CustomFormValidation {
     String password, [
     String? type,
   ]) {
-    // final hasUpperCase = RegExp('(?:[A-Z])');
-    // final hasLowerCase = RegExp('(?:[a-z])');
-    // final hasSymbols = RegExp(r"[!@#$%^&*(),\|+=;.?':{}|<>]");
-    // final hasANumber = RegExp('(?=.*?[0-9])');
-    // var text = text ? '' : message;
-    // return text;
     if (text == null) {
       return '';
     } else if (text.isEmpty) {
@@ -144,17 +117,7 @@ class CustomFormValidation {
       return 'Password must have 5 or more characters';
     } else if (text != password) {
       return 'Confirmation password must match password';
-    }
-    // else if (!hasANumber.hasMatch(text)) {
-    //   return 'Password must have at least a number';
-    // } else if (!hasLowerCase.hasMatch(text)) {
-    //   return 'Password must have at a lower character';
-    // } else if (!hasSymbols.hasMatch(text)) {
-    //   return 'Password must have at a special character';
-    // } else if (!hasUpperCase.hasMatch(text)) {
-    //   return 'Password must have at a upper character';
-    // }
-    else {
+    } else {
       return '';
     }
   }
