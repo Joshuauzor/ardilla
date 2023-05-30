@@ -225,7 +225,7 @@ class _SignInViewState extends State<SignInView> {
                           deactivate: !canSubmit,
                           onpress: () => Navigator.pushNamed(
                             context,
-                            RouteName.verifyEmail,
+                            RouteName.homeView,
                           ),
                         );
                       },
