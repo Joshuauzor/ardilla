@@ -32,7 +32,7 @@ class AppTabViewState extends State<AppTabView> {
   @override
   Widget build(BuildContext context) {
     final _widgetOptions = <Widget?>[
-      const SizedBox(),
+      const HomeView(),
       const SizedBox(),
       const SizedBox(),
       const SizedBox(),

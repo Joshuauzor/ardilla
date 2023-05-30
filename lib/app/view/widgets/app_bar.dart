@@ -14,7 +14,7 @@ class SecondaryAppBar extends StatelessWidget with PreferredSizeWidget {
     this.onTapLeading,
   }) : super(key: key);
 
-  final String? title;
+  final Widget? title;
   final Color titleColor;
   final Widget? leading;
   final VoidCallback? onTapTitle;
@@ -30,16 +30,18 @@ class SecondaryAppBar extends StatelessWidget with PreferredSizeWidget {
         padding: const EdgeInsets.only(
           left: 24,
         ),
-        child: title == null
-            ? GestureDetector(
-                onTap: onTapTitle,
-                child: SvgPicture.asset(
-                  AppAssets.logo,
-                ),
-              )
-            : HeaderText(title!),
+        child: GestureDetector(
+          onTap: onTapTitle,
+          child: Image.asset(
+            AppAssets.avatar,
+            height: 51,
+            width: 51,
+          ),
+        ),
       ),
-      backgroundColor: AppColors.white,
+      backgroundColor: AppColors.primaryBg,
+      title: title,
+      centerTitle: false,
       elevation: 0,
       actions: [
         Padding(
@@ -49,7 +51,7 @@ class SecondaryAppBar extends StatelessWidget with PreferredSizeWidget {
           child: GestureDetector(
             onTap: onTapLeading,
             child: SvgPicture.asset(
-              AppAssets.logo,
+              AppAssets.notification,
             ),
           ),
         ),

@@ -20,4 +20,14 @@ class AppAssets {
   static const String home = 'assets/icons/home.svg';
   static const String learn = 'assets/icons/learn.svg';
   static const String save = 'assets/icons/save.svg';
+  static const String avatar = 'assets/images/avatar.png';
+  static const String notification = 'assets/icons/notification.svg';
+  static const String sun = 'assets/icons/sun.svg';
+  static const String profile = 'assets/icons/profile.svg';
+  static const String portfolio = 'assets/icons/portfolio.svg';
+  static const String payment = 'assets/icons/payment.svg';
+  static const String investment = 'assets/icons/investment.svg';
+  static const String insurance = 'assets/icons/insurance.svg';
+  static const String budgeting = 'assets/icons/budgeting.svg';
+  static const String logout = 'assets/icons/log_out.svg';
 }
