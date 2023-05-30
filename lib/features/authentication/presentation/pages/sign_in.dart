@@ -266,7 +266,7 @@ class _SignInViewState extends State<SignInView> {
                         TextRegular(
                           'Create Account',
                           fontSize: 12,
-                          color: AppColors.gray,
+                          color: AppColors.primaryColor,
                         ),
                       ],
                     ),

@@ -6,4 +6,5 @@ class RouteName {
   static const String verifyEmail = 'verifyEmail';
   static const String completeProfile = 'completeProfile';
   static const String signInView = 'signInView';
+  static const String homeView = 'homeView';
 }
