@@ -6,4 +6,7 @@ class AppAssets {
   static const String top = 'assets/images/top.png';
   static const String arrow = 'assets/icons/arrow.svg';
   static const String signupBg = 'assets/images/signup_bg.png';
+  static const String hideEye = 'assets/icons/hide_eye.svg';
+  static const String showEye = 'assets/icons/show_eye.svg';
+  static const String mail = 'assets/icons/mail.svg';
 }

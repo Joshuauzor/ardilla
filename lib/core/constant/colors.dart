@@ -10,4 +10,7 @@ class AppColors {
   static const gray = Color(0xFF6B7280);
   static const deactivatedPrimaryColor = Color(0xffF3E6FF);
   static const circularBackground = Color(0xFFE7CDFE);
+  static const kDanger = Color(0xffF71C1C);
+  static const hintText = Color(0xFF9CA3AF);
+  static const deactivatedBtn = Color(0xFFE5E7EB);
 }
