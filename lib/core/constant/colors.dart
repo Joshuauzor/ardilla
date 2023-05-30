@@ -13,4 +13,6 @@ class AppColors {
   static const kDanger = Color(0xffF71C1C);
   static const hintText = Color(0xFF9CA3AF);
   static const deactivatedBtn = Color(0xFFE5E7EB);
+  static const fiftyPrimaryColor = Color(0x808807F7);
+  static const zeroWhite = Color(0X00FFFFFF);
 }
