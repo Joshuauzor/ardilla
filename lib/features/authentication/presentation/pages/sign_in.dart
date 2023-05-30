@@ -223,9 +223,10 @@ class _SignInViewState extends State<SignInView> {
                         return BusyButton(
                           title: 'Continue',
                           deactivate: !canSubmit,
-                          onpress: () => Navigator.pushNamed(
+                          onpress: () => Navigator.pushNamedAndRemoveUntil(
                             context,
-                            RouteName.homeView,
+                            RouteName.appTabView,
+                            (route) => false,
                           ),
                         );
                       },

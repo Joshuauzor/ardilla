@@ -48,15 +48,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         viewToShow: const HomeView(),
       );
 
-    // case RouteName.reportActivity:
-    //   final args = settings.arguments as ReportActivityParams;
-
-    //   return _getPageRoute(
-    //     routeName: settings.name!,
-    //     viewToShow: ReportActivity(
-    //       params: args,
-    //     ),
-    //   );
+    case RouteName.appTabView:
+      return _getPageRoute(
+        routeName: settings.name!,
+        viewToShow: const AppTabView(),
+      );
 
     default:
       return MaterialPageRoute<dynamic>(

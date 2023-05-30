@@ -7,4 +7,5 @@ class RouteName {
   static const String completeProfile = 'completeProfile';
   static const String signInView = 'signInView';
   static const String homeView = 'homeView';
+  static const String appTabView = 'appTabView';
 }

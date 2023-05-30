@@ -15,4 +15,9 @@ class AppAssets {
   static const String phone = 'assets/icons/smartphone.svg';
   static const String users = 'assets/icons/users.svg';
   static const String password = 'assets/icons/password.svg';
+  static const String dilla = 'assets/icons/dilla.svg';
+  static const String explore = 'assets/icons/explore.svg';
+  static const String home = 'assets/icons/home.svg';
+  static const String learn = 'assets/icons/learn.svg';
+  static const String save = 'assets/icons/save.svg';
 }
