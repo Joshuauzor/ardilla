@@ -17,11 +17,11 @@ class StepIndicator extends StatelessWidget {
         Indicator(
           isActive: currentIndex == 0,
         ),
-        const SizedBox(width: 10),
+        const SizedBox(width: 1.75),
         Indicator(
           isActive: currentIndex == 1,
         ),
-        const SizedBox(width: 10),
+        const SizedBox(width: 1.75),
         Indicator(
           isActive: currentIndex == 2,
         ),

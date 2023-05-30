@@ -14,11 +14,11 @@ class Indicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 4,
-      width: isActive ? 40 : 8,
+      height: 7,
+      width: isActive ? 29.17 : 7,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
-        color: isActive ? color : AppColors.deactivatedColor,
+        color: isActive ? color : AppColors.deactivatedPrimaryColor,
       ),
     );
   }

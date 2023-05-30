@@ -2,7 +2,9 @@ import 'package:ardilla/app/app.dart';
 import 'package:ardilla/core/core.dart';
 import 'package:ardilla/features/features.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -41,7 +43,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         width: double.infinity,
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 24,
+            horizontal: 26,
           ),
           child: Column(
             children: [
@@ -60,7 +62,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ),
                       description: TextRegular(
                         'Lorem itodjo dolor sit amet jsjsj. Congue eget aliquet nullam velit volutpat in viverra. Amet integer urna ornare congue ultrices at.',
-                        color: AppColors.darkPurple,
+                        color: AppColors.gray,
                         maxLines: 4,
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
@@ -75,7 +77,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ),
                       description: TextRegular(
                         'Lorem otpsbujfant consectetur. jdjud aliquet nullam velit volutpat in viverra. Amet integer urna ornare congue ultrices at.',
-                        color: AppColors.darkPurple,
+                        color: AppColors.gray,
                         maxLines: 4,
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
@@ -90,7 +92,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ),
                       description: TextRegular(
                         'Lorem hseeopd amet consectetur. Congue eget aliquet nullam velit volutpat in viverra. Amet integer urna ornare congue ultrices at.',
-                        color: AppColors.darkPurple,
+                        color: AppColors.gray,
                         maxLines: 4,
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
@@ -99,18 +101,51 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ],
                 ),
               ),
-              StepIndicator(currentIndex: currentIndex),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  StepIndicator(currentIndex: currentIndex),
+                  GestureDetector(
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      RouteName.signUpView,
+                    ),
+                    child: CircularPercentIndicator(
+                      radius: 40,
+                      lineWidth: 2,
+                      percent: 0.3,
+                      center: const CircularNextBtn(),
+                      progressColor: AppColors.primaryColor,
+                      backgroundColor: AppColors.circularBackground,
+                    ),
+                  )
+                ],
+              ),
               const Gap(56),
-              // BusyButton(
-              //   title: 'Create Account',
-              //   onpress: () => Navigator.pushNamed(
-              //     context,
-              //     RouteName.signup,
-              //   ),
-              // ),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class CircularNextBtn extends StatelessWidget {
+  const CircularNextBtn({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 62.25,
+      width: 62.25,
+      decoration: const BoxDecoration(
+        shape: BoxShape.circle,
+        color: AppColors.primaryColor,
+      ),
+      child: Center(
+        child: SvgPicture.asset(AppAssets.arrow),
       ),
     );
   }

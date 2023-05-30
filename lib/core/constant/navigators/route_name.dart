@@ -3,4 +3,5 @@ class RouteName {
   static const String splashTwo = 'splashTwo';
   static const String onboardingView = 'onboardingView';
   static const String signin = 'signin';
+  static const String signUpView = 'signUpView';
 }
