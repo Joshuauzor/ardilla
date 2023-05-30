@@ -9,4 +9,5 @@ class AppAssets {
   static const String hideEye = 'assets/icons/hide_eye.svg';
   static const String showEye = 'assets/icons/show_eye.svg';
   static const String mail = 'assets/icons/mail.svg';
+  static const String sendMail = 'assets/images/send_mail.png';
 }

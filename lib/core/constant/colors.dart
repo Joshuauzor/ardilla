@@ -15,4 +15,5 @@ class AppColors {
   static const deactivatedBtn = Color(0xFFE5E7EB);
   static const fiftyPrimaryColor = Color(0x808807F7);
   static const zeroWhite = Color(0X00FFFFFF);
+  static const primaryBg = Color(0xffF9F9F9);
 }

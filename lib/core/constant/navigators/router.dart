@@ -24,6 +24,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         viewToShow: const SignUpView(),
       );
 
+    case RouteName.verifyEmail:
+      return _getPageRoute(
+        routeName: settings.name!,
+        viewToShow: const VerifyEmail(),
+      );
+
     // case RouteName.reportActivity:
     //   final args = settings.arguments as ReportActivityParams;
 

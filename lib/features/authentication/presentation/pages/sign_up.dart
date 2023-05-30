@@ -169,7 +169,10 @@ class _SignUpViewState extends State<SignUpView> {
                         return BusyButton(
                           title: 'Continue',
                           deactivate: !canSubmit,
-                          onpress: () {},
+                          onpress: () => Navigator.pushNamed(
+                            context,
+                            RouteName.verifyEmail,
+                          ),
                         );
                       },
                     ),
